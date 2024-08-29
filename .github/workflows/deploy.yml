@@ -1,6 +1,9 @@
 name: Deploy Worker
 on:
-  repository_dispatch:
+  push:
+    branches: ["main"]
+  release:
+    types: ["published"]
 
 jobs:
   deploy:
